@@ -4,9 +4,9 @@ import br.com.alura.screenmatch.model.*;
 import br.com.alura.screenmatch.repository.SerieRepository;
 import br.com.alura.screenmatch.service.ConsumoApi;
 import br.com.alura.screenmatch.service.ConverteDados;
+
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
-import java.time.LocalDate;
 import java.util.*;
 
 public class Principal {
@@ -91,10 +91,10 @@ public class Principal {
 
     private void buscarSerieWeb() {
         DadosSerie dados = getDadosSerie();
+        System.out.println(dados);
         Serie serie = new Serie(dados);
         //dadosSeries.add(dados);
         repositorio.save(serie);
-        System.out.println(serie);
     }
 
     private DadosSerie getDadosSerie() {
